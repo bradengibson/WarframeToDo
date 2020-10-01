@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarframeToDo", "WarframeToDo\WarframeToDo.csproj", "{18D02C8A-5AC4-43C7-8990-7E7900E6B102}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarframeToDo", "WarframeToDo\WarframeToDo.csproj", "{F870B7C3-8567-47C5-B54A-E3700FE7E487}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{18D02C8A-5AC4-43C7-8990-7E7900E6B102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18D02C8A-5AC4-43C7-8990-7E7900E6B102}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18D02C8A-5AC4-43C7-8990-7E7900E6B102}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18D02C8A-5AC4-43C7-8990-7E7900E6B102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F870B7C3-8567-47C5-B54A-E3700FE7E487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F870B7C3-8567-47C5-B54A-E3700FE7E487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F870B7C3-8567-47C5-B54A-E3700FE7E487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F870B7C3-8567-47C5-B54A-E3700FE7E487}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A92C0FCF-BFDF-470F-BE74-79263C705F3D}
+		SolutionGuid = {EA33AE0C-9339-41C8-8363-0C82CE5A941D}
 	EndGlobalSection
 EndGlobal
