@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 24, 2020 at 02:13 AM
+-- Generation Time: Sep 24, 2020 at 03:00 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -25,6 +25,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `commonitem`
+--
+
+DROP TABLE IF EXISTS `commonitem`;
+CREATE TABLE IF NOT EXISTS `commonitem` (
+  `Id` int(50) NOT NULL AUTO_INCREMENT,
+  `ItemTypeId` int(50) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `WikiString` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `ItemTypeId` (`ItemTypeId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `itemtype`
+--
+
+DROP TABLE IF EXISTS `itemtype`;
+CREATE TABLE IF NOT EXISTS `itemtype` (
+  `Id` int(50) NOT NULL AUTO_INCREMENT,
+  `ItemType` varchar(50) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -37,7 +66,17 @@ CREATE TABLE IF NOT EXISTS `user` (
   `IsActive` tinyint(1) NOT NULL DEFAULT 1,
   `CreationDate` datetime NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `commonitem`
+--
+ALTER TABLE `commonitem`
+  ADD CONSTRAINT `commonitem_ibfk_1` FOREIGN KEY (`ItemTypeId`) REFERENCES `itemtype` (`Id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
