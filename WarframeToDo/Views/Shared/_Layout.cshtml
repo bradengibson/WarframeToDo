@@ -7,37 +7,28 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/semantic-ui")
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
+    <div class="ui fixed inverted menu">
+        <div class="ui container">
+            <a href="@Url.Action("Index", "Home")" class="header item">
+                <img class="logo" src="https://n9e5v4d8.ssl.hwcdn.net/images/longlanding/lotusIcon.jpg" />
+                &nbsp;&nbsp;Warframe Checklist
+            </a>
+            <a href="@Url.Action("About", "Home")" class="item">Items</a>
+            <a href="@Url.Action("Contact", "Home")" class="item">Wishlist</a>
+            <a href="@Url.Action("Contact", "Home")" class="item">Checklist</a>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="ui main text container">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <!--<div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+            <p>&copy; @DateTime.Now.Year - Warframe Checklist</p>
+        </div>
+    </div>-->
 </body>
 </html>
