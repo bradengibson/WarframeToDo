@@ -22,3 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Bump down the main container so it doesn't overlap with the top menu */
+.main.container {
+    margin-top: 5em;
+}

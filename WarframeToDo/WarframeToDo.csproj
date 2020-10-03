@@ -121,10 +121,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Objects\Items\Drop.cs" />
+    <Compile Include="Objects\Items\Patchlog.cs" />
+    <Compile Include="Objects\Items\Warframe.cs" />
+    <Compile Include="Objects\Items\WarframeAbility.cs" />
+    <Compile Include="Objects\Items\WarframeComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Item\ViewModelItemIndex.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -330,10 +337,34 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Item\Index.cshtml" />
+    <Content Include="WarframeItemsJson\All.json" />
+    <Content Include="WarframeItemsJson\Arcanes.json" />
+    <Content Include="WarframeItemsJson\Arch-Gun.json" />
+    <Content Include="WarframeItemsJson\Arch-Melee.json" />
+    <Content Include="WarframeItemsJson\Archwing.json" />
+    <Content Include="WarframeItemsJson\Enemy.json" />
+    <Content Include="WarframeItemsJson\Fish.json" />
+    <Content Include="WarframeItemsJson\Gear.json" />
+    <Content Include="WarframeItemsJson\Glyphs.json" />
+    <Content Include="WarframeItemsJson\Melee.json" />
+    <Content Include="WarframeItemsJson\Misc.json" />
+    <Content Include="WarframeItemsJson\Mods.json" />
+    <Content Include="WarframeItemsJson\Node.json" />
+    <Content Include="WarframeItemsJson\Pets.json" />
+    <Content Include="WarframeItemsJson\Primary.json" />
+    <Content Include="WarframeItemsJson\Quests.json" />
+    <Content Include="WarframeItemsJson\Relics.json" />
+    <Content Include="WarframeItemsJson\Resources.json" />
+    <Content Include="WarframeItemsJson\Secondary.json" />
+    <Content Include="WarframeItemsJson\Sentinels.json" />
+    <Content Include="WarframeItemsJson\SentinelWeapons.json" />
+    <Content Include="WarframeItemsJson\Sigils.json" />
+    <Content Include="WarframeItemsJson\Skins.json" />
+    <Content Include="WarframeItemsJson\Warframes.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
