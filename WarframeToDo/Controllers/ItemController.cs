@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using WarframeToDo.Objects.Items;
+using WarframeToDo.ViewModels.Item;
 
 namespace WarframeToDo.Controllers
 {
@@ -14,20 +15,15 @@ namespace WarframeToDo.Controllers
     {
         public ActionResult Index()
         {
-            // Load warframes from file
-            /*List<Warframe> warframes;
-            using (StreamReader file = File.OpenText(@"..\WarframeItemsJson\Warframes.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                warframes = serializer.Deserialize<List<Warframe>>(file);
-            }*/
+            // Load the list of warframes
             Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
-
             string jsonString = System.IO.File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "WarframeItemsJson\\Warframes.json"));
             List<Warframe> warframes = JsonConvert.DeserializeObject<List<Warframe>>(jsonString);
 
+            // Initialize the ViewModel
+            ViewModelItemIndex viewModelItemIndex = new ViewModelItemIndex(warframes);
 
-            return View();
+            return View(viewModelItemIndex);
         }
     }
 }
